@@ -12,7 +12,7 @@
 #>
 
 $ScriptVersion = "1"
-$BlockedAppsListUrl = "https://raw.githubusercontent.com/scottorgan/AutoPilotScript/master/AppsToRemove.txt"
+$BlockedAppsListUrl = "https://raw.githubusercontent.com/ErlachSupport/AutoPilotScript-ConfigureWindows/master/AppsToRemove.txt"
 $LogFileName = "AutopilotCustomConfig.log"
 
 #region ---FUNCTIONS---
@@ -82,13 +82,11 @@ function Disable-ChatAutoInstall {
             # Could not retrieve the online list - Notify and use hard-coded list below
             Write-LogEntry -Value "Could not retreive online Blocked App List - Using built in list!" -Severity 2
             $BlockedAppsList =    
-            "Clipchamp.Clipchamp
-                Microsoft.549981C3F5F10
+            "Microsoft.549981C3F5F10
                 Microsoft.GamingApp
                 Microsoft.GetHelp
                 Microsoft.Getstarted
                 Microsoft.MicrosoftOfficeHub
-                Microsoft.MicrosoftSolitaireCollection
                 Microsoft.People
                 Microsoft.PowerAutomateDesktop
                 Microsoft.Todos
